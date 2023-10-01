@@ -11,7 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 import java.util.List;
 
-public class Zadatak2 {
+public class zadatak2 {
     public static void main(String[] args) throws InterruptedException {
 
         WebDriverManager.chromedriver().setup();

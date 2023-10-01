@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class Zadatak5 {
+public class zadatak5 {
     public static void main(String[] args) {
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
@@ -36,5 +36,3 @@ public class Zadatak5 {
         }
     }
 }
-
-
