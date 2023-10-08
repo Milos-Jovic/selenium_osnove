@@ -26,7 +26,6 @@ public class Helper {
         while((count = bis.read(buffer,0,1024)) != -1)
         {
             fis.write(buffer, 0, count);
-
         }
         fis.close();
         bis.close();
