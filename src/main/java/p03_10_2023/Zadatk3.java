@@ -32,7 +32,6 @@ public class Zadatk3 {
         driver.findElement(By.xpath("/input[@id='password']")).sendKeys("invalid123");
 
     }
-
     @Test
     private void displayErrorWhenCredentialsAreWrong(){
 

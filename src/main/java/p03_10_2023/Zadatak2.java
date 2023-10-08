@@ -33,7 +33,6 @@ public class Zadatak2 {
     @BeforeMethod
     public void beforMethod() {
         driver.navigate().to("https://cms.demo.katalon.com/");
-
     }
 
 

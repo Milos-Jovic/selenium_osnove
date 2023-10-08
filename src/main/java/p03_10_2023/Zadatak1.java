@@ -27,7 +27,6 @@ public class Zadatak1 {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
 
-
     @BeforeMethod
     public void beforMethod() {
         driver.navigate().to("https://cms.demo.katalon.com");
