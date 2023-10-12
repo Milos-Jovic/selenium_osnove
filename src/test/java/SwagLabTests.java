@@ -315,15 +315,16 @@ public class SwagLabTests extends BasicTest {
 
     }
 
-//    @Test(priority = 28, retryAnalyzer = SwagLabRetry.class)
-//    public void VerifyThatRemoveButtonIsVisible() {
-//
-//        loginPage.loginWIthValidCredentials();
-//        inventoryPage.clickOnAdd();
-//        topNavPage.clickOnCart();
-//        cartPage.waitUntilRemoveButtonIsVisible();
-//
-//    }
+    @Test(priority = 28, retryAnalyzer = SwagLabRetry.class)
+    public void VerifyThatRemoveButtonIsVisible() {
+
+        loginPage.loginWIthValidCredentials();
+        inventoryPage.clickOnAdd();
+        topNavPage.clickOnCart();
+        cartPage.waitUntilRemoveButtonIsVisible();
+
+    }
+
 //    @Test(priority = 29, retryAnalyzer = SwagLabRetry.class)
 //    public void VerifyThatRemoveButtonIsWorking() {
 //
