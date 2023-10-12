@@ -190,17 +190,18 @@ public class SwagLabTests extends BasicTest {
 
     }
 
-//    @Test(priority = 17, retryAnalyzer = SwagLabRetry.class)
-//    public void VerifyThatLogoutOptionFromLeftNavigationMenuIsWorking() {
-//
-//        loginPage.loginWIthValidCredentials();
-//        topNavPage.clickOnCart();
-//        cartPage.waitForUrl();
-//        topNavPage.clickOnLeftNavMenuButton();
-//        leftNavPage.waitForLeftNavMenuToBeVisible();
-//        leftNavPage.clickOnLogoutButton();
-//
-//    }
+    @Test(priority = 17, retryAnalyzer = SwagLabRetry.class)
+    public void VerifyThatLogoutOptionFromLeftNavigationMenuIsWorking() {
+
+        loginPage.loginWIthValidCredentials();
+        topNavPage.clickOnCart();
+        cartPage.waitForUrl();
+        topNavPage.clickOnLeftNavMenuButton();
+        leftNavPage.waitForLeftNavMenuToBeVisible();
+        leftNavPage.clickOnLogoutButton();
+
+    }
+
 //    @Test(priority = 18, retryAnalyzer = SwagLabRetry.class)
 //    public void VerifyThatResetAppOptionFromLeftNavigationMenuIsWorking() {
 //
