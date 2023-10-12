@@ -392,14 +392,15 @@ public class SwagLabTests extends BasicTest {
 
     }
 
-//    @Test(priority = 35, retryAnalyzer = SwagLabRetry.class)
-//    public void VerifyThatFacebookIconIsVisibleInTheFooter() {
-//
-//        loginPage.loginWIthValidCredentials();
-//        topNavPage.clickOnCart();
-//        footerPage.waitForUrl();
-//
-//    }
+    @Test(priority = 35, retryAnalyzer = SwagLabRetry.class)
+    public void VerifyThatFacebookIconIsVisibleInTheFooter() {
+
+        loginPage.loginWIthValidCredentials();
+        topNavPage.clickOnCart();
+        footerPage.waitForUrl();
+
+    }
+
 //    @Test(priority = 36, retryAnalyzer = SwagLabRetry.class)
 //    public void VerifyThatLinkedInIconIsVisibleInTheFooter() {
 //
