@@ -1,4 +1,4 @@
-package p05_10_2023;
+package retry;
 
 import org.testng.IRetryAnalyzer;
 import org.testng.ITestResult;
