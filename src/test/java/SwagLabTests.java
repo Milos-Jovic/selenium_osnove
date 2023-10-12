@@ -164,19 +164,20 @@ public class SwagLabTests extends BasicTest {
 
     }
 
-//    @Test(priority = 15, retryAnalyzer = SwagLabRetry.class)
-//    public void VerifyThatAllItemsOptionFromLeftNavigationMenuIsWorking() {
-//
-//        loginPage.loginWIthValidCredentials();
-//        topNavPage.clickOnCart();
-//        cartPage.waitForUrl();
-//        topNavPage.clickOnLeftNavMenuButton();
-//        leftNavPage.waitForLeftNavMenuToBeVisible();
-//        leftNavPage.clickOnAllItemsLink();
-//
-//        Assert.assertEquals(inventoryPage.getSubTitleText(), "Products",
-//                "Sub title of inventory page should be 'Products'.");
-//    }
+    @Test(priority = 15, retryAnalyzer = SwagLabRetry.class)
+    public void VerifyThatAllItemsOptionFromLeftNavigationMenuIsWorking() {
+
+        loginPage.loginWIthValidCredentials();
+        topNavPage.clickOnCart();
+        cartPage.waitForUrl();
+        topNavPage.clickOnLeftNavMenuButton();
+        leftNavPage.waitForLeftNavMenuToBeVisible();
+        leftNavPage.clickOnAllItemsLink();
+
+        Assert.assertEquals(inventoryPage.getSubTitleText(), "Products",
+                "Sub title of inventory page should be 'Products'.");
+    }
+
 //    @Test(priority = 16, retryAnalyzer = SwagLabRetry.class)
 //    public void VerifyThatAboutOptionFromLeftNavigationMenuIsWorking() {
 //
