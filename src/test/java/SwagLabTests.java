@@ -35,4 +35,20 @@ public class SwagLabTests extends BasicTest {
 
 
     }
+
+    @Test(priority = 3, retryAnalyzer = SwagLabRetry.class)
+    public void addToCardButton() {
+        String username = "standard_user";
+        String password = "secret_sauce";
+        loginPage.clearAndTypeUserName(username);
+        loginPage.clearAndTypePassword(password);
+        loginPage.clickOnLoginButton();
+        Assert.assertEquals(driver.getCurrentUrl(),
+                baseUrl + "inventory.html",
+                "Current url should be 'https://www.saucedemo.com/inventory.html' ");
+        inventoryPage.getProduct();
+        inventoryPage.clickOnAdd();
+        inventoryPage.waitForRemoveButtonToBeVisible();
+
+    }
 }
