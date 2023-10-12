@@ -202,24 +202,25 @@ public class SwagLabTests extends BasicTest {
 
     }
 
-//    @Test(priority = 18, retryAnalyzer = SwagLabRetry.class)
-//    public void VerifyThatResetAppOptionFromLeftNavigationMenuIsWorking() {
-//
-//        loginPage.loginWIthValidCredentials();
-//        inventoryPage.clickOnAdd();
-//
-//        Assert.assertEquals(topNavPage.getNumberOfProductsInCart(), "1",
-//                "After reset the cart icon should be empty.");
-//
-//        topNavPage.clickOnCart();
-//        cartPage.waitForUrl();
-//        topNavPage.clickOnLeftNavMenuButton();
-//        leftNavPage.waitForLeftNavMenuToBeVisible();
-//        leftNavPage.clickOnResetAppButton();
-//
-//        Assert.assertEquals(topNavPage.getNumberOfProductsInCart(), "",
-//                "After reset the cart icon should be empty.");
-//    }
+    @Test(priority = 18, retryAnalyzer = SwagLabRetry.class)
+    public void VerifyThatResetAppOptionFromLeftNavigationMenuIsWorking() {
+
+        loginPage.loginWIthValidCredentials();
+        inventoryPage.clickOnAdd();
+
+        Assert.assertEquals(topNavPage.getNumberOfProductsInCart(), "1",
+                "After reset the cart icon should be empty.");
+
+        topNavPage.clickOnCart();
+        cartPage.waitForUrl();
+        topNavPage.clickOnLeftNavMenuButton();
+        leftNavPage.waitForLeftNavMenuToBeVisible();
+        leftNavPage.clickOnResetAppButton();
+
+        Assert.assertEquals(topNavPage.getNumberOfProductsInCart(), "",
+                "After reset the cart icon should be empty.");
+    }
+
 //    @Test(priority = 19, retryAnalyzer = SwagLabRetry.class)
 //    public void VerifyThatExitButtonFromLeftNavigationMenuIsVisible() {
 //
