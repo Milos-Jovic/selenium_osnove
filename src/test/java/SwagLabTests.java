@@ -221,16 +221,17 @@ public class SwagLabTests extends BasicTest {
                 "After reset the cart icon should be empty.");
     }
 
-//    @Test(priority = 19, retryAnalyzer = SwagLabRetry.class)
-//    public void VerifyThatExitButtonFromLeftNavigationMenuIsVisible() {
-//
-//        loginPage.loginWIthValidCredentials();
-//        topNavPage.clickOnCart();
-//        cartPage.waitForUrl();
-//        topNavPage.clickOnLeftNavMenuButton();
-//        leftNavPage.waitUntilExitButtonIsVisible();
-//
-//    }
+    @Test(priority = 19, retryAnalyzer = SwagLabRetry.class)
+    public void VerifyThatExitButtonFromLeftNavigationMenuIsVisible() {
+
+        loginPage.loginWIthValidCredentials();
+        topNavPage.clickOnCart();
+        cartPage.waitForUrl();
+        topNavPage.clickOnLeftNavMenuButton();
+        leftNavPage.waitUntilExitButtonIsVisible();
+
+    }
+
 //    @Test(priority = 20, retryAnalyzer = SwagLabRetry.class)
 //    public void VerifyThatExitButtonFromLeftNavigationMenuIsWorking() {
 //
