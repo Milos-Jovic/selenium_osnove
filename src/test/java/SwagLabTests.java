@@ -125,16 +125,17 @@ public class SwagLabTests extends BasicTest {
 
     }
 
-//    @Test(priority = 12, retryAnalyzer = SwagLabRetry.class)
-//    public void VerifyTheSubHeaderTitleForCartPage() {
-//
-//        loginPage.loginWIthValidCredentials();
-//        topNavPage.clickOnCart();
-//
-//        Assert.assertEquals(cartPage.getSubHeaderTitleText(), "Your Cart",
-//                "Sub title header for cart page should be 'Your Cart'.");
-//
-//    }
+    @Test(priority = 12, retryAnalyzer = SwagLabRetry.class)
+    public void VerifyTheSubHeaderTitleForCartPage() {
+
+        loginPage.loginWIthValidCredentials();
+        topNavPage.clickOnCart();
+
+        Assert.assertEquals(cartPage.getSubHeaderTitleText(), "Your Cart",
+                "Sub title header for cart page should be 'Your Cart'.");
+
+    }
+
 //    @Test(priority = 13, retryAnalyzer = SwagLabRetry.class)
 //    public void VerifyTotalNumberOfOptionsInLeftNavigationMenu() {
 //
