@@ -105,14 +105,15 @@ public class SwagLabTests extends BasicTest {
 
     }
 
-//    @Test(priority = 10, retryAnalyzer = SwagLabRetry.class)
-//    public void VerifyThatCartIconIsClickable() {
-//
-//        loginPage.loginWIthValidCredentials();
-//        topNavPage.clickOnCart();
-//        topNavPage.waitUntilCartIconIsClickable();
-//
-//    }
+    @Test(priority = 10, retryAnalyzer = SwagLabRetry.class)
+    public void VerifyThatCartIconIsClickable() {
+
+        loginPage.loginWIthValidCredentials();
+        topNavPage.clickOnCart();
+        topNavPage.waitUntilCartIconIsClickable();
+
+    }
+
 //    @Test(priority = 11, retryAnalyzer = SwagLabRetry.class)
 //    public void VerifyThatCartIconHasCorrectNumberOfAddedProducts() {
 //
