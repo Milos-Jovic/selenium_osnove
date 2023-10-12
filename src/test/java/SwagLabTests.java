@@ -5,8 +5,7 @@ import retry.SwagLabRetry;
 
 public class SwagLabTests extends BasicTest {
 
-    @Test
-            (priority = 1, retryAnalyzer = SwagLabRetry.class)
+    @Test(priority = 1, retryAnalyzer = SwagLabRetry.class)
     public void VerifyErrorWhenUsernameIsMissing() {
         loginPage.clickOnLoginButton();
         Assert.assertEquals(loginPage.geLoginErrorMessage(),
@@ -59,17 +58,18 @@ public class SwagLabTests extends BasicTest {
         inventoryPage.clickOnAdd();
     }
 
-//    @Test(priority = 6, retryAnalyzer = SwagLabRetry.class)
-//    public void VerifyThatCartIconIsPresentOnCartPage() {
-//
-//        loginPage.loginWIthValidCredentials();
-//        topNavPage.clickOnCart();
-//        cartPage.waitForUrl();
-//
-//        Assert.assertTrue(topNavPage.doesCartIconExist(),
-//                "Shopping cart icon should exist on the cart page.");
-//
-//    }
+    @Test(priority = 6, retryAnalyzer = SwagLabRetry.class)
+    public void VerifyThatCartIconIsPresentOnCartPage() {
+
+        loginPage.loginWIthValidCredentials();
+        topNavPage.clickOnCart();
+        cartPage.waitForUrl();
+
+        Assert.assertTrue(topNavPage.doesCartIconExist(),
+                "Shopping cart icon should exist on the cart page.");
+
+    }
+
 //    @Test(priority = 7, retryAnalyzer = SwagLabRetry.class)
 //    public void VerifyThatBurgerMenuButtonIsEnabled() {
 //
