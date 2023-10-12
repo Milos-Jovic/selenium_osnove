@@ -347,19 +347,20 @@ public class SwagLabTests extends BasicTest {
 
     }
 
-//    @Test(priority = 31, retryAnalyzer = SwagLabRetry.class)
-//    public void VerifyThatContinueShoppingButtonIsWorking() {
-//
-//        loginPage.loginWIthValidCredentials();
-//        inventoryPage.clickOnAdd();
-//        topNavPage.clickOnCart();
-//        cartPage.waitUntilShoppingButtonIsVisible();
-//        cartPage.clickOnContinueShoppingButton();
-//
-//        Assert.assertEquals(inventoryPage.getSubTitleText(), "Products",
-//                "Should be redirected to the inventory page.");
-//
-//    }
+    @Test(priority = 31, retryAnalyzer = SwagLabRetry.class)
+    public void VerifyThatContinueShoppingButtonIsWorking() {
+
+        loginPage.loginWIthValidCredentials();
+        inventoryPage.clickOnAdd();
+        topNavPage.clickOnCart();
+        cartPage.waitUntilShoppingButtonIsVisible();
+        cartPage.clickOnContinueShoppingButton();
+
+        Assert.assertEquals(inventoryPage.getSubTitleText(), "Products",
+                "Should be redirected to the inventory page.");
+
+    }
+
 //    @Test(priority = 32, retryAnalyzer = SwagLabRetry.class)
 //    public void VerifyThatCheckoutButtonIsVisible() {
 //
