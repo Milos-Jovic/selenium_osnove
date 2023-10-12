@@ -244,6 +244,7 @@ public class SwagLabTests extends BasicTest {
         cartPage.waitForLeftNavMenuToBecomeInvisible();
 
     }
+
     @Test(priority = 21, retryAnalyzer = SwagLabRetry.class)
     public void VerifyThatItemsAddedToTheCartAreVisible() {
 
@@ -308,7 +309,8 @@ public class SwagLabTests extends BasicTest {
     public void VerifyThatItemsTitleIsWorking() {
 
         loginPage.loginWIthValidCredentials();
-        inventoryPage.clickOnAdd();        topNavPage.clickOnCart();
+        inventoryPage.clickOnAdd();
+        topNavPage.clickOnCart();
         cartPage.waitForItemsToBeClickable(0);
         cartPage.clickOnItemsTitle(0);
         itemPage.waitUntilCurrentUrlContainsPageName();
@@ -410,12 +412,4 @@ public class SwagLabTests extends BasicTest {
 
     }
 
-//
-//    @Test(priority = 37, retryAnalyzer = SwagLabRetry.class)
-//    public void VerifyCopyRightNoticeMessageInFooter() {
-//
-//        loginPage.loginWIthValidCredentials();
-//        topNavPage.clickOnCart();
-//
-//    }
 }
