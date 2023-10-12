@@ -114,16 +114,17 @@ public class SwagLabTests extends BasicTest {
 
     }
 
-//    @Test(priority = 11, retryAnalyzer = SwagLabRetry.class)
-//    public void VerifyThatCartIconHasCorrectNumberOfAddedProducts() {
-//
-//        loginPage.loginWIthValidCredentials();
-//        topNavPage.clickOnCart();
-//
-//        Assert.assertEquals(topNavPage.getNumberOfProductsInCart(), "",
-//                "Number of products in cart icon should be 0.");
-//
-//    }
+    @Test(priority = 11, retryAnalyzer = SwagLabRetry.class)
+    public void VerifyThatCartIconHasCorrectNumberOfAddedProducts() {
+
+        loginPage.loginWIthValidCredentials();
+        topNavPage.clickOnCart();
+
+        Assert.assertEquals(topNavPage.getNumberOfProductsInCart(), "",
+                "Number of products in cart icon should be 0.");
+
+    }
+
 //    @Test(priority = 12, retryAnalyzer = SwagLabRetry.class)
 //    public void VerifyTheSubHeaderTitleForCartPage() {
 //
