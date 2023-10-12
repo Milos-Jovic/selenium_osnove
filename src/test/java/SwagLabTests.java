@@ -136,19 +136,20 @@ public class SwagLabTests extends BasicTest {
 
     }
 
-//    @Test(priority = 13, retryAnalyzer = SwagLabRetry.class)
-//    public void VerifyTotalNumberOfOptionsInLeftNavigationMenu() {
-//
-//        loginPage.loginWIthValidCredentials();
-//        topNavPage.clickOnCart();
-//        cartPage.waitForUrl();
-//        topNavPage.clickOnLeftNavMenuButton();
-//        leftNavPage.waitForLeftNavMenuToBeVisible();
-//
-//        Assert.assertEquals(leftNavPage.getNumberOfOptionsInLeftNavMenu(), 4,
-//                "Left navigation menu should contain 4 options.");
-//
-//    }
+    @Test(priority = 13, retryAnalyzer = SwagLabRetry.class)
+    public void VerifyTotalNumberOfOptionsInLeftNavigationMenu() {
+
+        loginPage.loginWIthValidCredentials();
+        topNavPage.clickOnCart();
+        cartPage.waitForUrl();
+        topNavPage.clickOnLeftNavMenuButton();
+        leftNavPage.waitForLeftNavMenuToBeVisible();
+
+        Assert.assertEquals(leftNavPage.getNumberOfOptionsInLeftNavMenu(), 4,
+                "Left navigation menu should contain 4 options.");
+
+    }
+
 //    @Test(priority = 14, retryAnalyzer = SwagLabRetry.class)
 //    public void VerifySpellingOfAllOptionsInLeftNavigationMenu() {
 //
