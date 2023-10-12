@@ -178,17 +178,18 @@ public class SwagLabTests extends BasicTest {
                 "Sub title of inventory page should be 'Products'.");
     }
 
-//    @Test(priority = 16, retryAnalyzer = SwagLabRetry.class)
-//    public void VerifyThatAboutOptionFromLeftNavigationMenuIsWorking() {
-//
-//        loginPage.loginWIthValidCredentials();
-//        topNavPage.clickOnCart();
-//        cartPage.waitForUrl();
-//        topNavPage.clickOnLeftNavMenuButton();
-//        leftNavPage.waitForLeftNavMenuToBeVisible();
-//        leftNavPage.clickOnAboutLink();
-//
-//    }
+    @Test(priority = 16, retryAnalyzer = SwagLabRetry.class)
+    public void VerifyThatAboutOptionFromLeftNavigationMenuIsWorking() {
+
+        loginPage.loginWIthValidCredentials();
+        topNavPage.clickOnCart();
+        cartPage.waitForUrl();
+        topNavPage.clickOnLeftNavMenuButton();
+        leftNavPage.waitForLeftNavMenuToBeVisible();
+        leftNavPage.clickOnAboutLink();
+
+    }
+
 //    @Test(priority = 17, retryAnalyzer = SwagLabRetry.class)
 //    public void VerifyThatLogoutOptionFromLeftNavigationMenuIsWorking() {
 //
