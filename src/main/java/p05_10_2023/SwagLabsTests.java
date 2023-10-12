@@ -11,7 +11,12 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.*;
+import retry.BootsnippRetry;
 
+
+import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.time.Duration;
 import java.util.List;
 
@@ -35,7 +40,7 @@ public class SwagLabsTests {
 
     }
 
-            @Test(priority = 1, retryAnalyzer = SwagLabsRetry.class)
+            @Test(priority = 1, retryAnalyzer = BootsnippRetry.class)
             public void verifyErrorIsDisplayedWhenUsernameIsMissing() {
         driver.findElement(By.id("login-button")).click();
 
@@ -47,7 +52,7 @@ public class SwagLabsTests {
                                 "Username is required"));
     }
 
-            @Test(priority = 2, retryAnalyzer = SwagLabsRetry.class)
+            @Test(priority = 2, retryAnalyzer = BootsnippRetry.class)
             public void verifyErrorIsDisplayedWhenPasswordIsMissing() {
         String username = "standard_user";
 
@@ -63,7 +68,7 @@ public class SwagLabsTests {
     }
 
 
-            @Test(priority = 3, retryAnalyzer = SwagLabsRetry.class)
+            @Test(priority = 3, retryAnalyzer = BootsnippRetry.class)
             public void verifyErrorIsDisplayedWhenCredentialsAreWrong() {
         String username = "standard_user";
         String password = "invalidpassword";
@@ -82,7 +87,7 @@ public class SwagLabsTests {
 
 
 
-            @Test (priority = 4, retryAnalyzer = SwagLabsRetry.class)
+            @Test (priority = 4, retryAnalyzer = BootsnippRetry.class)
             public void verifyErrorIsDisplayedWhenUserIsLocked() {
         String username = "locked_out_user";
         String password = "secret_sauce";
@@ -102,7 +107,7 @@ public class SwagLabsTests {
     }
 
 
-            @Test(priority = 5, retryAnalyzer = SwagLabsRetry.class)
+            @Test(priority = 5, retryAnalyzer = BootsnippRetry.class)
             public void verifySuccessfulLogin() {
         String username = "standard_user";
         String password = "secret_sauce";
@@ -138,7 +143,7 @@ public class SwagLabsTests {
 
     }
              @Test
-            (priority = 6, retryAnalyzer = SwagLabsRetry.class)
+            (priority = 6, retryAnalyzer = BootsnippRetry.class)
     public void addingProductsToCart() {
         String username = "standard_user";
         String password = "secret_sauce";
@@ -177,7 +182,7 @@ public class SwagLabsTests {
 
 
             @Test
-            (priority = 7, retryAnalyzer = SwagLabsRetry.class)
+            (priority = 7, retryAnalyzer = BootsnippRetry.class)
     public void viewingProductDetails() {
         String username = "standard_user";
         String password = "secret_sauce";
@@ -227,7 +232,7 @@ public class SwagLabsTests {
     }
 
             @Test
-            (priority = 8, retryAnalyzer = SwagLabsRetry.class)
+            (priority = 8, retryAnalyzer = BootsnippRetry.class)
              public void removingProductsFromCart() {
         String username = "standard_user";
         String password = "secret_sauce";
@@ -278,7 +283,7 @@ public class SwagLabsTests {
 
 
              @Test
-            (priority = 9, retryAnalyzer = SwagLabsRetry.class)
+            (priority = 9, retryAnalyzer = BootsnippRetry.class)
     public void productCheckout() {
         String username = "standard_user";
         String password = "secret_sauce";
@@ -349,8 +354,8 @@ public class SwagLabsTests {
 
 
             @Test
-            (priority = 10, retryAnalyzer = SwagLabsRetry.class)
-    public void validateSocialLinksInFooter(){
+            (priority = 10, retryAnalyzer = BootsnippRetry.class)
+    public void validateSocialLinksInFooter() throws IOException {
                 String username = "standard_user";
                 String password = "secret_sauce";
 
@@ -368,15 +373,20 @@ public class SwagLabsTests {
                 WebElement footer = driver.findElement(By.className("footer"));
                     new Actions(driver).scrollToElement(footer).perform();
 
-                String twitter = driver.findElement(By.cssSelector(".social_twitter>a"))
-                        .getAttribute("href");
-                String facebook=driver.findElement(By.cssSelector(".social_facebook>a"))
-                        .getAttribute("href");
-                String linkedin = driver.findElement(By.cssSelector(".social_linkedin>a"))
-                        .getAttribute("href");
+                List<WebElement> links = driver.findElements(By.cssSelector(".social a"));
+
+                for (int i = 0; i < links.size(); i++) {
+
+                        URL urls = new URL(links.get(i).getAttribute("src"));
+                        String URL = links.get(i).getAttribute("src");
+                        HttpURLConnection http = (HttpURLConnection) urls.openConnection();
+                        int statusCode = http.getResponseCode();
+
+                    Assert.assertTrue(statusCode >= 200 && statusCode <  400,
+                            URL + "Status Code is not between 200 and 400.");
+                }
 
             }
-
 
 
     @AfterMethod
