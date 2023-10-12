@@ -70,17 +70,17 @@ public class SwagLabTests extends BasicTest {
 
     }
 
-//    @Test(priority = 7, retryAnalyzer = SwagLabRetry.class)
-//    public void VerifyThatBurgerMenuButtonIsEnabled() {
-//
-//        loginPage.loginWIthValidCredentials();
-//        topNavPage.clickOnCart();
-//        cartPage.waitForUrl();
-//
-//        Assert.assertTrue(topNavPage.isLeftNavButtonEnabled(),
-//                "Left navigation menu button should be enabled on the cart page.");
-//
-//    }
+    @Test(priority = 7, retryAnalyzer = SwagLabRetry.class)
+    public void VerifyThatBurgerMenuButtonIsEnabled() {
+
+        loginPage.loginWIthValidCredentials();
+        topNavPage.clickOnCart();
+        cartPage.waitForUrl();
+
+        Assert.assertTrue(topNavPage.isLeftNavButtonEnabled(),
+                "Left navigation menu button should be enabled on the cart page.");
+
+    }
 //
 //    @Test(priority = 8, retryAnalyzer = SwagLabRetry.class)
 //    public void VerifyThatCartIconIsEnabled() {
