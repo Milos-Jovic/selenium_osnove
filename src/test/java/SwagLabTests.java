@@ -150,19 +150,20 @@ public class SwagLabTests extends BasicTest {
 
     }
 
-//    @Test(priority = 14, retryAnalyzer = SwagLabRetry.class)
-//    public void VerifySpellingOfAllOptionsInLeftNavigationMenu() {
-//
-//        loginPage.loginWIthValidCredentials();
-//        topNavPage.clickOnCart();
-//        cartPage.waitForUrl();
-//        topNavPage.clickOnLeftNavMenuButton();
-//        leftNavPage.waitForLeftNavMenuToBeVisible();
-//
-//        Assert.assertTrue(leftNavPage.checkSpellingOfAllOptionsInLeftNavMenu(),
-//                "Spelling of elements in left navigation manu is not valid.");
-//
-//    }
+    @Test(priority = 14, retryAnalyzer = SwagLabRetry.class)
+    public void VerifySpellingOfAllOptionsInLeftNavigationMenu() {
+
+        loginPage.loginWIthValidCredentials();
+        topNavPage.clickOnCart();
+        cartPage.waitForUrl();
+        topNavPage.clickOnLeftNavMenuButton();
+        leftNavPage.waitForLeftNavMenuToBeVisible();
+
+        Assert.assertTrue(leftNavPage.checkSpellingOfAllOptionsInLeftNavMenu(),
+                "Spelling of elements in left navigation manu is not valid.");
+
+    }
+
 //    @Test(priority = 15, retryAnalyzer = SwagLabRetry.class)
 //    public void VerifyThatAllItemsOptionFromLeftNavigationMenuIsWorking() {
 //
