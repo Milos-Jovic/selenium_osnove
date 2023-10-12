@@ -244,15 +244,16 @@ public class SwagLabTests extends BasicTest {
         cartPage.waitForLeftNavMenuToBecomeInvisible();
 
     }
-//    @Test(priority = 21, retryAnalyzer = SwagLabRetry.class)
-//    public void VerifyThatItemsAddedToTheCartAreVisible() {
-//
-//        loginPage.loginWIthValidCredentials();
-//        inventoryPage.clickOnAdd();
-//        topNavPage.clickOnCart();
-//        cartPage.waitForAddedProductsToBeVisible();
-//
-//    }
+    @Test(priority = 21, retryAnalyzer = SwagLabRetry.class)
+    public void VerifyThatItemsAddedToTheCartAreVisible() {
+
+        loginPage.loginWIthValidCredentials();
+        inventoryPage.clickOnAdd();
+        topNavPage.clickOnCart();
+        cartPage.waitForAddedProductsToBeVisible();
+
+    }
+
 //    @Test(priority = 22, retryAnalyzer = SwagLabRetry.class)
 //    public void VerifyThatItemsTitleAddedToTheCartIsVisible() {
 //
